@@ -1,0 +1,16 @@
+﻿@model List<SearchEngine.Models.Result>
+    <br />
+
+@{ Html.RenderPartial("Index");}
+
+<ul>
+    @foreach(var item in Model)
+    {
+        <li style="width:500px">
+            <a href="@item.Link" style="color:blue">@item.Title</a>
+            <span style="font-size:15px; color:green">@item.Link</span>
+            <span style="color:gray">@item.Snippet</span>
+
+        </li>
+    }
+</ul>

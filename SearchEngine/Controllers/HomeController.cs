@@ -20,8 +20,8 @@ namespace SearchEngine.Controllers
         public ActionResult ShowResults()
         {
             string searchQuery = Request["search"];
-            string cx = "016851440436007321454:ncxpbj0kn2q";
-            string apiKey = "AIzaSyDHSNNyvjB2sFwMCO4k_w3v8zuNQgNiRYw";
+            string cx = "SearchEngineID";
+            string apiKey = "APIKey";
             var request = WebRequest.Create("https://www.googleapis.com/customsearch/v1?key=" + apiKey + "&cx=" + cx + "&q=" + searchQuery);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             Stream dataStream = response.GetResponseStream();
